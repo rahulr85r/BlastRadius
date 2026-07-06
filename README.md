@@ -165,6 +165,20 @@ Adding a language = one adapter file (`adapters/<lang>.py`, ~100 lines) + a reso
 
 All three read the same committed graph. The hook and CI keep it fresh; the query surface is a pure convenience. Nothing about continual use requires an LLM or a network call.
 
+## Contributing
+
+Contributions are welcome — new language adapters especially. Start with:
+
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — how to fork, test (auditing edges, not just running it), and open a PR.
+- **[ROADMAP.md](ROADMAP.md)** — what's planned, by scope. Good first issues: a **TypeScript adapter**, a **Go/Rust/Ruby/C# adapter**, or widening the **Swift framework-name guard**.
+- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** — the Contributor Covenant.
+
+Issue and PR templates will guide you. The one non-negotiable: **no false edges** — an unresolvable or ambiguous reference must be skipped and counted, never guessed. That property is the whole point.
+
+### Sister project
+
+BlastRadius shares its tree-sitter adapter shape and its "no LLM, no server, pure-stdlib, committed-output" philosophy with **[TokenHack](https://github.com/rahulr85r/TokenHack)**, which answers a different question — staging the right context so AI coding assistants spend fewer tokens exploring a large repo. If you write a language adapter for one, porting it to the other is usually a short job.
+
 ## License
 
 MIT
