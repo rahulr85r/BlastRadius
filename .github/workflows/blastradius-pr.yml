@@ -1,0 +1,62 @@
+name: blastradius-pr
+
+# Phase 2 — comment the blast-radius impact of every PR, scored per SYMBOL:
+# which classes/functions the diff touched, who depends on them, and what
+# share of the repo is reachable from the change. Pure stdlib — no
+# tree-sitter needed here; it reads the committed baseline graph from the
+# merge-base.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: blastradius-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  impact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compute impact comment
+        id: impact
+        run: |
+          BASE_SHA=$(git merge-base origin/${{ github.base_ref }} HEAD)
+          echo "Merge base: $BASE_SHA"
+          git diff -U0 --no-color "$BASE_SHA"...HEAD > /tmp/pr.diff
+          # Baseline graph = the graph committed on the base revision, so
+          # symbol line spans match the diff's old-side line numbers.
+          if ! git show "$BASE_SHA:.claude/skills/blastradius/index/graph.json" > /tmp/baseline.json 2>/dev/null; then
+            echo '{}' > /tmp/baseline.json
+          fi
+          python3 .claude/skills/blastradius/pr_impact.py \
+            --graph /tmp/baseline.json \
+            --diff /tmp/pr.diff \
+            --base-sha "$BASE_SHA" > /tmp/comment.md
+          cat /tmp/comment.md
+
+      - name: Post or update sticky comment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          MARKER='<!-- blastradius-pr-comment -->'
+          CID=$(gh api "repos/${{ github.repository }}/issues/$PR/comments" \
+                --jq ".[] | select(.body | startswith(\"$MARKER\")) | .id" | head -n1)
+          if [[ -n "$CID" ]]; then
+            gh api -X PATCH "repos/${{ github.repository }}/issues/comments/$CID" \
+              -F body=@/tmp/comment.md > /dev/null
+            echo "Updated existing comment $CID"
+          else
+            gh pr comment "$PR" --body-file /tmp/comment.md
+            echo "Posted new comment"
+          fi

@@ -1,0 +1,1380 @@
+{
+ "adapters_available": {
+  "javascript": true,
+  "jvm": true,
+  "python": true,
+  "swift": true
+ },
+ "built_at_commit": "",
+ "files": {
+  ".claude/skills/blastradius/adapters/__init__.py": {
+   "imports": [
+    {
+     "names": [
+      "Symbol",
+      "ImportRef",
+      "ExtractResult",
+      "get_text",
+      "first_line",
+      "head_keyword"
+     ],
+     "path": "._base"
+    },
+    {
+     "names": [
+      "python"
+     ],
+     "path": "."
+    },
+    {
+     "names": [
+      "jvm"
+     ],
+     "path": "."
+    },
+    {
+     "names": [
+      "swift"
+     ],
+     "path": "."
+    },
+    {
+     "names": [
+      "javascript"
+     ],
+     "path": "."
+    },
+    {
+     "names": [],
+     "path": "os"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "_build_ext_map",
+    "bool",
+    "get",
+    "getattr",
+    "keys",
+    "lower",
+    "sorted",
+    "splitext"
+   ],
+   "size": 1578,
+   "symbols": [
+    {
+     "end_line": 32,
+     "kind": "function",
+     "line": 27,
+     "name": "_build_ext_map",
+     "signature": "def _build_ext_map():"
+    },
+    {
+     "end_line": 42,
+     "kind": "function",
+     "line": 38,
+     "name": "get_adapter",
+     "signature": "def get_adapter(filepath: str):"
+    },
+    {
+     "end_line": 47,
+     "kind": "function",
+     "line": 45,
+     "name": "supported_extensions",
+     "signature": "def supported_extensions():"
+    },
+    {
+     "end_line": 52,
+     "kind": "function",
+     "line": 50,
+     "name": "availability_report",
+     "signature": "def availability_report():"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/adapters/_base.py": {
+   "imports": [
+    {
+     "names": [
+      "dataclass",
+      "field",
+      "asdict"
+     ],
+     "path": "dataclasses"
+    },
+    {
+     "names": [
+      "List"
+     ],
+     "path": "typing"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "asdict",
+    "decode",
+    "field",
+    "first_line",
+    "get_text",
+    "replace",
+    "split",
+    "strip"
+   ],
+   "size": 2361,
+   "symbols": [
+    {
+     "end_line": 17,
+     "kind": "class",
+     "line": 7,
+     "name": "Symbol",
+     "signature": "class Symbol:"
+    },
+    {
+     "end_line": 17,
+     "kind": "function",
+     "line": 16,
+     "name": "to_dict",
+     "signature": "def to_dict(self):"
+    },
+    {
+     "end_line": 36,
+     "kind": "class",
+     "line": 21,
+     "name": "ImportRef",
+     "signature": "class ImportRef:"
+    },
+    {
+     "end_line": 36,
+     "kind": "function",
+     "line": 35,
+     "name": "to_dict",
+     "signature": "def to_dict(self):"
+    },
+    {
+     "end_line": 45,
+     "kind": "class",
+     "line": 40,
+     "name": "ExtractResult",
+     "signature": "class ExtractResult:"
+    },
+    {
+     "end_line": 50,
+     "kind": "function",
+     "line": 48,
+     "name": "get_text",
+     "signature": "def get_text(node, source: bytes) -> str:"
+    },
+    {
+     "end_line": 54,
+     "kind": "function",
+     "line": 53,
+     "name": "first_line",
+     "signature": "def first_line(text: str) -> str:"
+    },
+    {
+     "end_line": 66,
+     "kind": "function",
+     "line": 57,
+     "name": "head_keyword",
+     "signature": "def head_keyword(node, source: bytes, keywords) -> str:"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/adapters/javascript.py": {
+   "imports": [
+    {
+     "names": [
+      "Symbol",
+      "ImportRef",
+      "ExtractResult",
+      "get_text",
+      "first_line"
+     ],
+     "path": "._base"
+    },
+    {
+     "names": [
+      "Parser",
+      "Language"
+     ],
+     "path": "tree_sitter"
+    },
+    {
+     "names": [],
+     "path": "tree_sitter_javascript"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ExtractResult",
+    "ImportRef",
+    "Language",
+    "Parser",
+    "Symbol",
+    "_clause_names",
+    "_string_arg",
+    "add",
+    "append",
+    "child_by_field_name",
+    "extend",
+    "first_line",
+    "get_text",
+    "language",
+    "len",
+    "parse",
+    "pop",
+    "reversed",
+    "set",
+    "sorted",
+    "strip",
+    "tuple"
+   ],
+   "size": 6073,
+   "symbols": [
+    {
+     "end_line": 42,
+     "kind": "function",
+     "line": 33,
+     "name": "_string_arg",
+     "signature": "def _string_arg(node, source):"
+    },
+    {
+     "end_line": 54,
+     "kind": "function",
+     "line": 45,
+     "name": "_clause_names",
+     "signature": "def _clause_names(node, source):"
+    },
+    {
+     "end_line": 171,
+     "kind": "function",
+     "line": 57,
+     "name": "extract",
+     "signature": "def extract(source: bytes, filepath: str) -> ExtractResult:"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/adapters/jvm.py": {
+   "imports": [
+    {
+     "names": [
+      "Symbol",
+      "ImportRef",
+      "ExtractResult",
+      "get_text",
+      "first_line",
+      "head_keyword"
+     ],
+     "path": "._base"
+    },
+    {
+     "names": [
+      "Parser",
+      "Language"
+     ],
+     "path": "tree_sitter"
+    },
+    {
+     "names": [],
+     "path": "tree_sitter_java"
+    },
+    {
+     "names": [],
+     "path": "tree_sitter_kotlin"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ExtractResult",
+    "ImportRef",
+    "Language",
+    "Parser",
+    "Symbol",
+    "_find_name",
+    "_kind_of",
+    "_parse_import_text",
+    "_parser_for",
+    "add",
+    "append",
+    "child_by_field_name",
+    "endswith",
+    "first_line",
+    "get",
+    "get_text",
+    "head_keyword",
+    "isupper",
+    "join",
+    "language",
+    "len",
+    "lower",
+    "parse",
+    "pop",
+    "reversed",
+    "rstrip",
+    "set",
+    "sorted",
+    "split",
+    "startswith",
+    "strip"
+   ],
+   "size": 6770,
+   "symbols": [
+    {
+     "end_line": 75,
+     "kind": "function",
+     "line": 69,
+     "name": "_parser_for",
+     "signature": "def _parser_for(filepath: str):"
+    },
+    {
+     "end_line": 85,
+     "kind": "function",
+     "line": 78,
+     "name": "_find_name",
+     "signature": "def _find_name(node):"
+    },
+    {
+     "end_line": 94,
+     "kind": "function",
+     "line": 88,
+     "name": "_kind_of",
+     "signature": "def _kind_of(node, source) -> str:"
+    },
+    {
+     "end_line": 111,
+     "kind": "function",
+     "line": 97,
+     "name": "_parse_import_text",
+     "signature": "def _parse_import_text(node, source):"
+    },
+    {
+     "end_line": 201,
+     "kind": "function",
+     "line": 114,
+     "name": "extract",
+     "signature": "def extract(source: bytes, filepath: str) -> ExtractResult:"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/adapters/python.py": {
+   "imports": [
+    {
+     "names": [
+      "Symbol",
+      "ImportRef",
+      "ExtractResult",
+      "get_text",
+      "first_line"
+     ],
+     "path": "._base"
+    },
+    {
+     "names": [
+      "Parser",
+      "Language"
+     ],
+     "path": "tree_sitter"
+    },
+    {
+     "names": [],
+     "path": "tree_sitter_python"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ExtractResult",
+    "ImportRef",
+    "Language",
+    "Parser",
+    "Symbol",
+    "add",
+    "append",
+    "child_by_field_name",
+    "first_line",
+    "get_text",
+    "language",
+    "len",
+    "parse",
+    "pop",
+    "reversed",
+    "set",
+    "sorted",
+    "split",
+    "tuple"
+   ],
+   "size": 4112,
+   "symbols": [
+    {
+     "end_line": 114,
+     "kind": "function",
+     "line": 22,
+     "name": "extract",
+     "signature": "def extract(source: bytes, filepath: str) -> ExtractResult:"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/adapters/swift.py": {
+   "imports": [
+    {
+     "names": [
+      "Symbol",
+      "ImportRef",
+      "ExtractResult",
+      "get_text",
+      "first_line",
+      "head_keyword"
+     ],
+     "path": "._base"
+    },
+    {
+     "names": [
+      "Parser",
+      "Language"
+     ],
+     "path": "tree_sitter"
+    },
+    {
+     "names": [],
+     "path": "tree_sitter_swift"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ExtractResult",
+    "ImportRef",
+    "Language",
+    "Parser",
+    "Symbol",
+    "_find_name",
+    "_kind_of",
+    "add",
+    "append",
+    "child_by_field_name",
+    "first_line",
+    "get",
+    "get_text",
+    "head_keyword",
+    "isupper",
+    "language",
+    "len",
+    "parse",
+    "pop",
+    "reversed",
+    "set",
+    "sorted",
+    "split"
+   ],
+   "size": 4595,
+   "symbols": [
+    {
+     "end_line": 52,
+     "kind": "function",
+     "line": 45,
+     "name": "_find_name",
+     "signature": "def _find_name(node):"
+    },
+    {
+     "end_line": 61,
+     "kind": "function",
+     "line": 55,
+     "name": "_kind_of",
+     "signature": "def _kind_of(node, source) -> str:"
+    },
+    {
+     "end_line": 137,
+     "kind": "function",
+     "line": 64,
+     "name": "extract",
+     "signature": "def extract(source: bytes, filepath: str) -> ExtractResult:"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/graph.py": {
+   "imports": [
+    {
+     "names": [],
+     "path": "argparse"
+    },
+    {
+     "names": [],
+     "path": "json"
+    },
+    {
+     "names": [],
+     "path": "posixpath"
+    },
+    {
+     "names": [],
+     "path": "sys"
+    },
+    {
+     "names": [
+      "Counter",
+      "defaultdict"
+     ],
+     "path": "collections"
+    },
+    {
+     "names": [
+      "Path"
+     ],
+     "path": "pathlib"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ArgumentParser",
+    "Counter",
+    "EdgeSet",
+    "_py_module_parts",
+    "_single_segment",
+    "add",
+    "add_argument",
+    "any",
+    "append",
+    "build_graph",
+    "build_jvm_index",
+    "build_python_resolver",
+    "defaultdict",
+    "dict",
+    "dirname",
+    "discard",
+    "dumps",
+    "endswith",
+    "frozenset",
+    "get",
+    "getattr",
+    "int",
+    "isinstance",
+    "items",
+    "iter",
+    "join",
+    "len",
+    "load",
+    "lstrip",
+    "main",
+    "match_suffix",
+    "max",
+    "min",
+    "next",
+    "normpath",
+    "open",
+    "parse_args",
+    "pop",
+    "print",
+    "radius_metrics",
+    "range",
+    "resolve_js_import",
+    "resolve_jvm_file",
+    "resolve_python_import",
+    "resolve_swift",
+    "reverse_closure",
+    "round",
+    "rsplit",
+    "set",
+    "setdefault",
+    "shared",
+    "sort",
+    "sorted",
+    "split",
+    "startswith",
+    "strongly_connected",
+    "sum",
+    "tier_of",
+    "to_list",
+    "tuple",
+    "union",
+    "update",
+    "values",
+    "write_text",
+    "zip"
+   ],
+   "size": 28098,
+   "symbols": [
+    {
+     "end_line": 125,
+     "kind": "function",
+     "line": 119,
+     "name": "tier_of",
+     "signature": "def tier_of(pct: float, transitive: int) -> str:"
+    },
+    {
+     "end_line": 161,
+     "kind": "class",
+     "line": 132,
+     "name": "EdgeSet",
+     "signature": "class EdgeSet:"
+    },
+    {
+     "end_line": 138,
+     "kind": "function",
+     "line": 137,
+     "name": "__init__",
+     "signature": "def __init__(self):"
+    },
+    {
+     "end_line": 150,
+     "kind": "function",
+     "line": 140,
+     "name": "add",
+     "signature": "def add(self, src, dst, kind, via=None, confidence=\"high\"):"
+    },
+    {
+     "end_line": 161,
+     "kind": "function",
+     "line": 152,
+     "name": "to_list",
+     "signature": "def to_list(self):"
+    },
+    {
+     "end_line": 172,
+     "kind": "function",
+     "line": 168,
+     "name": "_py_module_parts",
+     "signature": "def _py_module_parts(rel):"
+    },
+    {
+     "end_line": 222,
+     "kind": "function",
+     "line": 175,
+     "name": "build_python_resolver",
+     "signature": "def build_python_resolver(files):"
+    },
+    {
+     "end_line": 220,
+     "kind": "function",
+     "line": 195,
+     "name": "match_suffix",
+     "signature": "def match_suffix(parts, importer_rel):"
+    },
+    {
+     "end_line": 215,
+     "kind": "function",
+     "line": 208,
+     "name": "shared",
+     "signature": "def shared(rel):"
+    },
+    {
+     "end_line": 319,
+     "kind": "function",
+     "line": 225,
+     "name": "resolve_python_import",
+     "signature": "def resolve_python_import(imp, importer_rel, fileset, match_suffix, top_level,"
+    },
+    {
+     "end_line": 289,
+     "kind": "function",
+     "line": 269,
+     "name": "_single_segment",
+     "signature": "def _single_segment(name, via):"
+    },
+    {
+     "end_line": 340,
+     "kind": "function",
+     "line": 326,
+     "name": "resolve_js_import",
+     "signature": "def resolve_js_import(imp, importer_rel, fileset, edges, stats):"
+    },
+    {
+     "end_line": 359,
+     "kind": "function",
+     "line": 347,
+     "name": "build_jvm_index",
+     "signature": "def build_jvm_index(files):"
+    },
+    {
+     "end_line": 404,
+     "kind": "function",
+     "line": 362,
+     "name": "resolve_jvm_file",
+     "signature": "def resolve_jvm_file(rel, entry, class_index, own_types, edges, stats):"
+    },
+    {
+     "end_line": 440,
+     "kind": "function",
+     "line": 411,
+     "name": "resolve_swift",
+     "signature": "def resolve_swift(files, edges, stats):"
+    },
+    {
+     "end_line": 464,
+     "kind": "function",
+     "line": 447,
+     "name": "reverse_closure",
+     "signature": "def reverse_closure(start_set, rdep):"
+    },
+    {
+     "end_line": 472,
+     "kind": "function",
+     "line": 467,
+     "name": "radius_metrics",
+     "signature": "def radius_metrics(closure, n_files):"
+    },
+    {
+     "end_line": 520,
+     "kind": "function",
+     "line": 475,
+     "name": "strongly_connected",
+     "signature": "def strongly_connected(adj):"
+    },
+    {
+     "end_line": 667,
+     "kind": "function",
+     "line": 527,
+     "name": "build_graph",
+     "signature": "def build_graph(facts: dict, verbose: bool = False) -> dict:"
+    },
+    {
+     "end_line": 682,
+     "kind": "function",
+     "line": 670,
+     "name": "main",
+     "signature": "def main():"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/indexer.py": {
+   "imports": [
+    {
+     "names": [],
+     "path": "argparse"
+    },
+    {
+     "names": [],
+     "path": "hashlib"
+    },
+    {
+     "names": [],
+     "path": "json"
+    },
+    {
+     "names": [],
+     "path": "os"
+    },
+    {
+     "names": [],
+     "path": "subprocess"
+    },
+    {
+     "names": [],
+     "path": "sys"
+    },
+    {
+     "names": [],
+     "path": "time"
+    },
+    {
+     "names": [
+      "Path"
+     ],
+     "path": "pathlib"
+    },
+    {
+     "names": [
+      "availability_report",
+      "get_adapter",
+      "supported_extensions"
+     ],
+     "path": "adapters"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ArgumentParser",
+    "Path",
+    "_skip",
+    "add_argument",
+    "as_posix",
+    "availability_report",
+    "build_facts",
+    "current_commit",
+    "cwd",
+    "dumps",
+    "exists",
+    "extract",
+    "file_hash",
+    "find_repo_root",
+    "get",
+    "get_adapter",
+    "hexdigest",
+    "insert",
+    "is_dir",
+    "items",
+    "iter",
+    "len",
+    "load",
+    "load_json",
+    "lower",
+    "main",
+    "mkdir",
+    "open",
+    "parse_args",
+    "print",
+    "range",
+    "read",
+    "relative_to",
+    "resolve",
+    "run",
+    "sha256",
+    "sorted",
+    "splitext",
+    "stat",
+    "str",
+    "strip",
+    "supported_extensions",
+    "time",
+    "to_dict",
+    "update",
+    "walk",
+    "walk_code",
+    "write_text"
+   ],
+   "size": 8159,
+   "symbols": [
+    {
+     "end_line": 67,
+     "kind": "function",
+     "line": 57,
+     "name": "find_repo_root",
+     "signature": "def find_repo_root(start: Path) -> Path:"
+    },
+    {
+     "end_line": 80,
+     "kind": "function",
+     "line": 70,
+     "name": "current_commit",
+     "signature": "def current_commit(repo_root: Path) -> str:"
+    },
+    {
+     "end_line": 88,
+     "kind": "function",
+     "line": 83,
+     "name": "file_hash",
+     "signature": "def file_hash(path: Path) -> str:"
+    },
+    {
+     "end_line": 106,
+     "kind": "function",
+     "line": 91,
+     "name": "walk_code",
+     "signature": "def walk_code(root: Path, exts, stop_dirs=None):"
+    },
+    {
+     "end_line": 116,
+     "kind": "function",
+     "line": 109,
+     "name": "load_json",
+     "signature": "def load_json(path: Path):"
+    },
+    {
+     "end_line": 232,
+     "kind": "function",
+     "line": 119,
+     "name": "build_facts",
+     "signature": "def build_facts(root: Path, force: bool = False, verbose: bool = False,"
+    },
+    {
+     "end_line": 149,
+     "kind": "function",
+     "line": 146,
+     "name": "_skip",
+     "signature": "def _skip(reason: str):"
+    },
+    {
+     "end_line": 248,
+     "kind": "function",
+     "line": 235,
+     "name": "main",
+     "signature": "def main():"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/pr_impact.py": {
+   "imports": [
+    {
+     "names": [],
+     "path": "argparse"
+    },
+    {
+     "names": [],
+     "path": "json"
+    },
+    {
+     "names": [],
+     "path": "re"
+    },
+    {
+     "names": [],
+     "path": "sys"
+    },
+    {
+     "names": [
+      "defaultdict"
+     ],
+     "path": "collections"
+    },
+    {
+     "names": [
+      "Path"
+     ],
+     "path": "pathlib"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ArgumentParser",
+    "add",
+    "add_argument",
+    "adjacency",
+    "analyze",
+    "any",
+    "append",
+    "compile",
+    "defaultdict",
+    "dict",
+    "exit",
+    "get",
+    "group",
+    "int",
+    "items",
+    "join",
+    "len",
+    "list",
+    "load",
+    "main",
+    "match",
+    "max",
+    "open",
+    "overlaps",
+    "parse_args",
+    "parse_diff",
+    "print",
+    "read",
+    "read_text",
+    "render_comment",
+    "reverse_closure",
+    "round",
+    "set",
+    "sorted",
+    "splitlines",
+    "str",
+    "tier_from_pct",
+    "values"
+   ],
+   "size": 10598,
+   "symbols": [
+    {
+     "end_line": 78,
+     "kind": "function",
+     "line": 51,
+     "name": "parse_diff",
+     "signature": "def parse_diff(text: str):"
+    },
+    {
+     "end_line": 88,
+     "kind": "function",
+     "line": 81,
+     "name": "adjacency",
+     "signature": "def adjacency(graph):"
+    },
+    {
+     "end_line": 102,
+     "kind": "function",
+     "line": 91,
+     "name": "reverse_closure",
+     "signature": "def reverse_closure(start_set, rdep):"
+    },
+    {
+     "end_line": 109,
+     "kind": "function",
+     "line": 105,
+     "name": "overlaps",
+     "signature": "def overlaps(span, ranges):"
+    },
+    {
+     "end_line": 192,
+     "kind": "function",
+     "line": 112,
+     "name": "analyze",
+     "signature": "def analyze(graph, diff_ranges, new_files):"
+    },
+    {
+     "end_line": 204,
+     "kind": "function",
+     "line": 195,
+     "name": "tier_from_pct",
+     "signature": "def tier_from_pct(pct, reach):"
+    },
+    {
+     "end_line": 240,
+     "kind": "function",
+     "line": 207,
+     "name": "render_comment",
+     "signature": "def render_comment(result, graph, base_sha=\"\"):"
+    },
+    {
+     "end_line": 272,
+     "kind": "function",
+     "line": 243,
+     "name": "main",
+     "signature": "def main():"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/query.py": {
+   "imports": [
+    {
+     "names": [],
+     "path": "json"
+    },
+    {
+     "names": [],
+     "path": "sys"
+    },
+    {
+     "names": [
+      "defaultdict"
+     ],
+     "path": "collections"
+    },
+    {
+     "names": [
+      "Path"
+     ],
+     "path": "pathlib"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "Path",
+    "_fmt_list",
+    "add",
+    "adjacency",
+    "append",
+    "closure_by_depth",
+    "cwd",
+    "defaultdict",
+    "endswith",
+    "exists",
+    "exit",
+    "find_graph",
+    "get",
+    "items",
+    "join",
+    "len",
+    "load",
+    "load_graph",
+    "lower",
+    "main",
+    "max",
+    "next",
+    "open",
+    "print",
+    "print_file_card",
+    "print_overview",
+    "print_symbol_card",
+    "resolve",
+    "resolve_target",
+    "set",
+    "sorted",
+    "strip",
+    "sum",
+    "upper",
+    "values"
+   ],
+   "size": 8829,
+   "symbols": [
+    {
+     "end_line": 30,
+     "kind": "function",
+     "line": 24,
+     "name": "find_graph",
+     "signature": "def find_graph() -> Path:"
+    },
+    {
+     "end_line": 41,
+     "kind": "function",
+     "line": 33,
+     "name": "load_graph",
+     "signature": "def load_graph():"
+    },
+    {
+     "end_line": 52,
+     "kind": "function",
+     "line": 44,
+     "name": "adjacency",
+     "signature": "def adjacency(graph):"
+    },
+    {
+     "end_line": 70,
+     "kind": "function",
+     "line": 55,
+     "name": "closure_by_depth",
+     "signature": "def closure_by_depth(start, rdep):"
+    },
+    {
+     "end_line": 102,
+     "kind": "function",
+     "line": 73,
+     "name": "resolve_target",
+     "signature": "def resolve_target(arg, graph):"
+    },
+    {
+     "end_line": 110,
+     "kind": "function",
+     "line": 105,
+     "name": "_fmt_list",
+     "signature": "def _fmt_list(items, cap=MAX_LIST):"
+    },
+    {
+     "end_line": 133,
+     "kind": "function",
+     "line": 113,
+     "name": "print_overview",
+     "signature": "def print_overview(graph):"
+    },
+    {
+     "end_line": 178,
+     "kind": "function",
+     "line": 136,
+     "name": "print_file_card",
+     "signature": "def print_file_card(rel, graph, fwd, rdep, via_map):"
+    },
+    {
+     "end_line": 202,
+     "kind": "function",
+     "line": 181,
+     "name": "print_symbol_card",
+     "signature": "def print_symbol_card(rel, sym, graph, rdep, via_map):"
+    },
+    {
+     "end_line": 232,
+     "kind": "function",
+     "line": 205,
+     "name": "main",
+     "signature": "def main():"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/report.py": {
+   "imports": [
+    {
+     "names": [],
+     "path": "argparse"
+    },
+    {
+     "names": [],
+     "path": "json"
+    },
+    {
+     "names": [
+      "defaultdict"
+     ],
+     "path": "collections"
+    },
+    {
+     "names": [
+      "Path"
+     ],
+     "path": "pathlib"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ArgumentParser",
+    "_diagram_nodes",
+    "_fmt_pct",
+    "_mermaid_id",
+    "_mermaid_label",
+    "_short",
+    "add",
+    "add_argument",
+    "append",
+    "defaultdict",
+    "enumerate",
+    "get",
+    "items",
+    "join",
+    "len",
+    "load",
+    "main",
+    "max",
+    "open",
+    "parse_args",
+    "render",
+    "replace",
+    "rsplit",
+    "set",
+    "sort",
+    "sorted",
+    "split",
+    "sum",
+    "write_text"
+   ],
+   "size": 13673,
+   "symbols": [
+    {
+     "end_line": 43,
+     "kind": "function",
+     "line": 42,
+     "name": "_fmt_pct",
+     "signature": "def _fmt_pct(p):"
+    },
+    {
+     "end_line": 47,
+     "kind": "function",
+     "line": 46,
+     "name": "_short",
+     "signature": "def _short(path, n=60):"
+    },
+    {
+     "end_line": 51,
+     "kind": "function",
+     "line": 50,
+     "name": "_mermaid_id",
+     "signature": "def _mermaid_id(i):"
+    },
+    {
+     "end_line": 57,
+     "kind": "function",
+     "line": 54,
+     "name": "_diagram_nodes",
+     "signature": "def _diagram_nodes(graph):"
+    },
+    {
+     "end_line": 67,
+     "kind": "function",
+     "line": 60,
+     "name": "_mermaid_label",
+     "signature": "def _mermaid_label(rel, m):"
+    },
+    {
+     "end_line": 305,
+     "kind": "function",
+     "line": 70,
+     "name": "render",
+     "signature": "def render(graph: dict) -> str:"
+    },
+    {
+     "end_line": 315,
+     "kind": "function",
+     "line": 308,
+     "name": "main",
+     "signature": "def main():"
+    }
+   ],
+   "type_refs": []
+  },
+  ".claude/skills/blastradius/run.py": {
+   "imports": [
+    {
+     "names": [],
+     "path": "argparse"
+    },
+    {
+     "names": [],
+     "path": "json"
+    },
+    {
+     "names": [],
+     "path": "sys"
+    },
+    {
+     "names": [
+      "Path"
+     ],
+     "path": "pathlib"
+    },
+    {
+     "names": [
+      "build_facts",
+      "find_repo_root",
+      "INDEX_REL"
+     ],
+     "path": "indexer"
+    },
+    {
+     "names": [
+      "build_graph"
+     ],
+     "path": "graph"
+    },
+    {
+     "names": [
+      "render"
+     ],
+     "path": "report"
+    },
+    {
+     "names": [
+      "availability_report"
+     ],
+     "path": "adapters"
+    }
+   ],
+   "lang": "python",
+   "package": "",
+   "references": [
+    "ArgumentParser",
+    "Path",
+    "add_argument",
+    "any",
+    "availability_report",
+    "build_facts",
+    "build_graph",
+    "cwd",
+    "dumps",
+    "find_repo_root",
+    "insert",
+    "items",
+    "main",
+    "parse_args",
+    "print",
+    "render",
+    "resolve",
+    "sorted",
+    "str",
+    "values",
+    "write_text"
+   ],
+   "size": 3253,
+   "symbols": [
+    {
+     "end_line": 74,
+     "kind": "function",
+     "line": 28,
+     "name": "main",
+     "signature": "def main():"
+    }
+   ],
+   "type_refs": []
+  }
+ },
+ "n_files": 12,
+ "n_parsed": 12,
+ "n_reused": 0,
+ "n_skipped": 0,
+ "skip_reasons": {},
+ "version": 1
+}

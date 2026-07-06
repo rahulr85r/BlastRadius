@@ -1,0 +1,42 @@
+#!/bin/sh
+# BlastRadius — silent pre-commit hook.
+#
+# Runs automatically on every commit. Regenerates blastradius.md + the
+# dependency graph (incrementally — only changed files are re-parsed) and
+# stages them so the report is always in sync with the code you commit.
+#
+# Design: fully silent and best-effort. It prints nothing and NEVER blocks a
+# commit. If Python or the tree-sitter grammars aren't installed on this
+# machine, it simply skips — the CI report workflow regenerates on push, so
+# the committed report stays correct either way. Nobody has to know it's here.
+
+# Repo root (exit quietly if somehow not in a git repo).
+ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+SKILL="$ROOT/.claude/skills/blastradius"
+[ -f "$SKILL/run.py" ] || exit 0
+
+# Fast path: skip entirely unless this commit actually touches source files
+# in a language BlastRadius understands (docs-only commits stay instant).
+if ! git diff --cached --name-only --diff-filter=ACMR 2>/dev/null \
+     | grep -qiE '\.(py|js|jsx|mjs|cjs|java|kt|kts|swift)$'; then
+    exit 0
+fi
+
+# Need an interpreter; if none, skip silently (CI will catch up).
+PY=$(command -v python3 2>/dev/null || command -v python 2>/dev/null) || exit 0
+
+# Don't scatter __pycache__ into the repo during the silent run.
+export PYTHONDONTWRITEBYTECODE=1
+
+# Regenerate the report + graph. Redirect all output; never fail the commit.
+if "$PY" "$SKILL/run.py" --root "$ROOT" >/dev/null 2>&1; then
+    # Stage only BlastRadius's own outputs — nothing the developer didn't
+    # already choose to commit.
+    git add "$ROOT/blastradius.md" \
+            "$ROOT/.claude/skills/blastradius/index/graph.json" \
+            "$ROOT/.claude/skills/blastradius/index/facts.json" \
+            "$ROOT/.claude/skills/blastradius/index/meta.json" \
+            >/dev/null 2>&1 || true
+fi
+
+exit 0

@@ -1,0 +1,1233 @@
+{
+ "built_at_commit": "",
+ "cycles": [],
+ "edges": [
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/_base.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/__init__.py",
+   "via": [
+    "ExtractResult",
+    "ImportRef",
+    "Symbol",
+    "first_line",
+    "get_text",
+    "head_keyword"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/javascript.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/__init__.py",
+   "via": [
+    "javascript"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/jvm.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/__init__.py",
+   "via": [
+    "jvm"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/python.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/__init__.py",
+   "via": [
+    "python"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/swift.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/__init__.py",
+   "via": [
+    "swift"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/_base.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/javascript.py",
+   "via": [
+    "ExtractResult",
+    "ImportRef",
+    "Symbol",
+    "first_line",
+    "get_text"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/_base.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/jvm.py",
+   "via": [
+    "ExtractResult",
+    "ImportRef",
+    "Symbol",
+    "first_line",
+    "get_text",
+    "head_keyword"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/_base.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/python.py",
+   "via": [
+    "ExtractResult",
+    "ImportRef",
+    "Symbol",
+    "first_line",
+    "get_text"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/_base.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/adapters/swift.py",
+   "via": [
+    "ExtractResult",
+    "ImportRef",
+    "Symbol",
+    "first_line",
+    "get_text",
+    "head_keyword"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/__init__.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/indexer.py",
+   "via": [
+    "availability_report",
+    "get_adapter",
+    "supported_extensions"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/adapters/__init__.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/run.py",
+   "via": [
+    "availability_report"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/graph.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/run.py",
+   "via": [
+    "build_graph"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/indexer.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/run.py",
+   "via": [
+    "INDEX_REL",
+    "build_facts",
+    "find_repo_root"
+   ]
+  },
+  {
+   "confidence": "high",
+   "dst": ".claude/skills/blastradius/report.py",
+   "kinds": [
+    "import"
+   ],
+   "src": ".claude/skills/blastradius/run.py",
+   "via": [
+    "render"
+   ]
+  }
+ ],
+ "files": {
+  ".claude/skills/blastradius/adapters/__init__.py": {
+   "attribution_coverage": 1.0,
+   "depth": 1,
+   "direct": 2,
+   "lang": "python",
+   "out": 5,
+   "package": "",
+   "pct": 18.2,
+   "score": 2.0,
+   "symbols": [
+    {
+     "attributed_direct": 2,
+     "direct": 2,
+     "end_line": 52,
+     "kind": "function",
+     "line": 50,
+     "name": "availability_report",
+     "pct": 18.2,
+     "tier": "high",
+     "transitive": 2
+    },
+    {
+     "attributed_direct": 1,
+     "direct": 1,
+     "end_line": 42,
+     "kind": "function",
+     "line": 38,
+     "name": "get_adapter",
+     "pct": 18.2,
+     "tier": "high",
+     "transitive": 2
+    },
+    {
+     "attributed_direct": 1,
+     "direct": 1,
+     "end_line": 47,
+     "kind": "function",
+     "line": 45,
+     "name": "supported_extensions",
+     "pct": 18.2,
+     "tier": "high",
+     "transitive": 2
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 32,
+     "kind": "function",
+     "line": 27,
+     "name": "_build_ext_map",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "high",
+   "transitive": 2
+  },
+  ".claude/skills/blastradius/adapters/_base.py": {
+   "attribution_coverage": 1.0,
+   "depth": 2,
+   "direct": 5,
+   "lang": "python",
+   "out": 0,
+   "package": "",
+   "pct": 63.6,
+   "score": 6.2,
+   "symbols": [
+    {
+     "attributed_direct": 5,
+     "direct": 5,
+     "end_line": 17,
+     "kind": "class",
+     "line": 7,
+     "name": "Symbol",
+     "pct": 63.6,
+     "tier": "critical",
+     "transitive": 7
+    },
+    {
+     "attributed_direct": 5,
+     "direct": 5,
+     "end_line": 36,
+     "kind": "class",
+     "line": 21,
+     "name": "ImportRef",
+     "pct": 63.6,
+     "tier": "critical",
+     "transitive": 7
+    },
+    {
+     "attributed_direct": 5,
+     "direct": 5,
+     "end_line": 45,
+     "kind": "class",
+     "line": 40,
+     "name": "ExtractResult",
+     "pct": 63.6,
+     "tier": "critical",
+     "transitive": 7
+    },
+    {
+     "attributed_direct": 5,
+     "direct": 5,
+     "end_line": 50,
+     "kind": "function",
+     "line": 48,
+     "name": "get_text",
+     "pct": 63.6,
+     "tier": "critical",
+     "transitive": 7
+    },
+    {
+     "attributed_direct": 5,
+     "direct": 5,
+     "end_line": 54,
+     "kind": "function",
+     "line": 53,
+     "name": "first_line",
+     "pct": 63.6,
+     "tier": "critical",
+     "transitive": 7
+    },
+    {
+     "attributed_direct": 3,
+     "direct": 3,
+     "end_line": 66,
+     "kind": "function",
+     "line": 57,
+     "name": "head_keyword",
+     "pct": 63.6,
+     "tier": "critical",
+     "transitive": 7
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 17,
+     "kind": "function",
+     "line": 16,
+     "name": "to_dict",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 36,
+     "kind": "function",
+     "line": 35,
+     "name": "to_dict",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "critical",
+   "transitive": 7
+  },
+  ".claude/skills/blastradius/adapters/javascript.py": {
+   "attribution_coverage": 0.0,
+   "depth": 2,
+   "direct": 1,
+   "lang": "python",
+   "out": 1,
+   "package": "",
+   "pct": 27.3,
+   "score": 2.2,
+   "symbols": [
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 42,
+     "kind": "function",
+     "line": 33,
+     "name": "_string_arg",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 54,
+     "kind": "function",
+     "line": 45,
+     "name": "_clause_names",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 171,
+     "kind": "function",
+     "line": 57,
+     "name": "extract",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    }
+   ],
+   "tier": "critical",
+   "transitive": 3
+  },
+  ".claude/skills/blastradius/adapters/jvm.py": {
+   "attribution_coverage": 0.0,
+   "depth": 2,
+   "direct": 1,
+   "lang": "python",
+   "out": 1,
+   "package": "",
+   "pct": 27.3,
+   "score": 2.2,
+   "symbols": [
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 75,
+     "kind": "function",
+     "line": 69,
+     "name": "_parser_for",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 85,
+     "kind": "function",
+     "line": 78,
+     "name": "_find_name",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 94,
+     "kind": "function",
+     "line": 88,
+     "name": "_kind_of",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 111,
+     "kind": "function",
+     "line": 97,
+     "name": "_parse_import_text",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 201,
+     "kind": "function",
+     "line": 114,
+     "name": "extract",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    }
+   ],
+   "tier": "critical",
+   "transitive": 3
+  },
+  ".claude/skills/blastradius/adapters/python.py": {
+   "attribution_coverage": 0.0,
+   "depth": 2,
+   "direct": 1,
+   "lang": "python",
+   "out": 1,
+   "package": "",
+   "pct": 27.3,
+   "score": 2.2,
+   "symbols": [
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 114,
+     "kind": "function",
+     "line": 22,
+     "name": "extract",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    }
+   ],
+   "tier": "critical",
+   "transitive": 3
+  },
+  ".claude/skills/blastradius/adapters/swift.py": {
+   "attribution_coverage": 0.0,
+   "depth": 2,
+   "direct": 1,
+   "lang": "python",
+   "out": 1,
+   "package": "",
+   "pct": 27.3,
+   "score": 2.2,
+   "symbols": [
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 52,
+     "kind": "function",
+     "line": 45,
+     "name": "_find_name",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 61,
+     "kind": "function",
+     "line": 55,
+     "name": "_kind_of",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 1,
+     "end_line": 137,
+     "kind": "function",
+     "line": 64,
+     "name": "extract",
+     "pct": 27.3,
+     "tier": "critical",
+     "transitive": 3
+    }
+   ],
+   "tier": "critical",
+   "transitive": 3
+  },
+  ".claude/skills/blastradius/graph.py": {
+   "attribution_coverage": 1.0,
+   "depth": 1,
+   "direct": 1,
+   "lang": "python",
+   "out": 0,
+   "package": "",
+   "pct": 9.1,
+   "score": 1.0,
+   "symbols": [
+    {
+     "attributed_direct": 1,
+     "direct": 1,
+     "end_line": 667,
+     "kind": "function",
+     "line": 527,
+     "name": "build_graph",
+     "pct": 9.1,
+     "tier": "medium",
+     "transitive": 1
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 125,
+     "kind": "function",
+     "line": 119,
+     "name": "tier_of",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 161,
+     "kind": "class",
+     "line": 132,
+     "name": "EdgeSet",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 138,
+     "kind": "function",
+     "line": 137,
+     "name": "__init__",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 150,
+     "kind": "function",
+     "line": 140,
+     "name": "add",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 161,
+     "kind": "function",
+     "line": 152,
+     "name": "to_list",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 172,
+     "kind": "function",
+     "line": 168,
+     "name": "_py_module_parts",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 222,
+     "kind": "function",
+     "line": 175,
+     "name": "build_python_resolver",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 220,
+     "kind": "function",
+     "line": 195,
+     "name": "match_suffix",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 215,
+     "kind": "function",
+     "line": 208,
+     "name": "shared",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 319,
+     "kind": "function",
+     "line": 225,
+     "name": "resolve_python_import",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 289,
+     "kind": "function",
+     "line": 269,
+     "name": "_single_segment",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 340,
+     "kind": "function",
+     "line": 326,
+     "name": "resolve_js_import",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 359,
+     "kind": "function",
+     "line": 347,
+     "name": "build_jvm_index",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 404,
+     "kind": "function",
+     "line": 362,
+     "name": "resolve_jvm_file",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 440,
+     "kind": "function",
+     "line": 411,
+     "name": "resolve_swift",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 464,
+     "kind": "function",
+     "line": 447,
+     "name": "reverse_closure",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 472,
+     "kind": "function",
+     "line": 467,
+     "name": "radius_metrics",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 520,
+     "kind": "function",
+     "line": 475,
+     "name": "strongly_connected",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 682,
+     "kind": "function",
+     "line": 670,
+     "name": "main",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "medium",
+   "transitive": 1
+  },
+  ".claude/skills/blastradius/indexer.py": {
+   "attribution_coverage": 1.0,
+   "depth": 1,
+   "direct": 1,
+   "lang": "python",
+   "out": 1,
+   "package": "",
+   "pct": 9.1,
+   "score": 1.0,
+   "symbols": [
+    {
+     "attributed_direct": 1,
+     "direct": 1,
+     "end_line": 67,
+     "kind": "function",
+     "line": 57,
+     "name": "find_repo_root",
+     "pct": 9.1,
+     "tier": "medium",
+     "transitive": 1
+    },
+    {
+     "attributed_direct": 1,
+     "direct": 1,
+     "end_line": 232,
+     "kind": "function",
+     "line": 119,
+     "name": "build_facts",
+     "pct": 9.1,
+     "tier": "medium",
+     "transitive": 1
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 80,
+     "kind": "function",
+     "line": 70,
+     "name": "current_commit",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 88,
+     "kind": "function",
+     "line": 83,
+     "name": "file_hash",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 106,
+     "kind": "function",
+     "line": 91,
+     "name": "walk_code",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 116,
+     "kind": "function",
+     "line": 109,
+     "name": "load_json",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 149,
+     "kind": "function",
+     "line": 146,
+     "name": "_skip",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 248,
+     "kind": "function",
+     "line": 235,
+     "name": "main",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "medium",
+   "transitive": 1
+  },
+  ".claude/skills/blastradius/pr_impact.py": {
+   "attribution_coverage": 0.0,
+   "depth": 0,
+   "direct": 0,
+   "lang": "python",
+   "out": 0,
+   "package": "",
+   "pct": 0.0,
+   "score": 0,
+   "symbols": [
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 78,
+     "kind": "function",
+     "line": 51,
+     "name": "parse_diff",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 88,
+     "kind": "function",
+     "line": 81,
+     "name": "adjacency",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 102,
+     "kind": "function",
+     "line": 91,
+     "name": "reverse_closure",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 109,
+     "kind": "function",
+     "line": 105,
+     "name": "overlaps",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 192,
+     "kind": "function",
+     "line": 112,
+     "name": "analyze",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 204,
+     "kind": "function",
+     "line": 195,
+     "name": "tier_from_pct",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 240,
+     "kind": "function",
+     "line": 207,
+     "name": "render_comment",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 272,
+     "kind": "function",
+     "line": 243,
+     "name": "main",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "none",
+   "transitive": 0
+  },
+  ".claude/skills/blastradius/query.py": {
+   "attribution_coverage": 0.0,
+   "depth": 0,
+   "direct": 0,
+   "lang": "python",
+   "out": 0,
+   "package": "",
+   "pct": 0.0,
+   "score": 0,
+   "symbols": [
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 30,
+     "kind": "function",
+     "line": 24,
+     "name": "find_graph",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 41,
+     "kind": "function",
+     "line": 33,
+     "name": "load_graph",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 52,
+     "kind": "function",
+     "line": 44,
+     "name": "adjacency",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 70,
+     "kind": "function",
+     "line": 55,
+     "name": "closure_by_depth",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 102,
+     "kind": "function",
+     "line": 73,
+     "name": "resolve_target",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 110,
+     "kind": "function",
+     "line": 105,
+     "name": "_fmt_list",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 133,
+     "kind": "function",
+     "line": 113,
+     "name": "print_overview",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 178,
+     "kind": "function",
+     "line": 136,
+     "name": "print_file_card",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 202,
+     "kind": "function",
+     "line": 181,
+     "name": "print_symbol_card",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 232,
+     "kind": "function",
+     "line": 205,
+     "name": "main",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "none",
+   "transitive": 0
+  },
+  ".claude/skills/blastradius/report.py": {
+   "attribution_coverage": 1.0,
+   "depth": 1,
+   "direct": 1,
+   "lang": "python",
+   "out": 0,
+   "package": "",
+   "pct": 9.1,
+   "score": 1.0,
+   "symbols": [
+    {
+     "attributed_direct": 1,
+     "direct": 1,
+     "end_line": 305,
+     "kind": "function",
+     "line": 70,
+     "name": "render",
+     "pct": 9.1,
+     "tier": "medium",
+     "transitive": 1
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 43,
+     "kind": "function",
+     "line": 42,
+     "name": "_fmt_pct",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 47,
+     "kind": "function",
+     "line": 46,
+     "name": "_short",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 51,
+     "kind": "function",
+     "line": 50,
+     "name": "_mermaid_id",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 57,
+     "kind": "function",
+     "line": 54,
+     "name": "_diagram_nodes",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 67,
+     "kind": "function",
+     "line": 60,
+     "name": "_mermaid_label",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    },
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 315,
+     "kind": "function",
+     "line": 308,
+     "name": "main",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "medium",
+   "transitive": 1
+  },
+  ".claude/skills/blastradius/run.py": {
+   "attribution_coverage": 0.0,
+   "depth": 0,
+   "direct": 0,
+   "lang": "python",
+   "out": 4,
+   "package": "",
+   "pct": 0.0,
+   "score": 0,
+   "symbols": [
+    {
+     "attributed_direct": 0,
+     "direct": 0,
+     "end_line": 74,
+     "kind": "function",
+     "line": 28,
+     "name": "main",
+     "pct": 0.0,
+     "tier": "none",
+     "transitive": 0
+    }
+   ],
+   "tier": "none",
+   "transitive": 0
+  }
+ },
+ "hub_threshold": 5,
+ "hubs": [
+  ".claude/skills/blastradius/adapters/_base.py"
+ ],
+ "n_edges": 14,
+ "n_files": 12,
+ "resolution": {
+  "ambiguous_skipped": 0,
+  "attributed_edges": 10,
+  "external": 44,
+  "framework_shadowed": 0,
+  "imports_total": 58,
+  "resolved": 18,
+  "type_ref_edges": 0,
+  "unresolved": 0
+ },
+ "tool_version": "0.1.0",
+ "version": 1
+}
