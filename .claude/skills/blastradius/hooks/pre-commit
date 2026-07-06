@@ -30,12 +30,10 @@ export PYTHONDONTWRITEBYTECODE=1
 
 # Regenerate the report + graph. Redirect all output; never fail the commit.
 if "$PY" "$SKILL/run.py" --root "$ROOT" >/dev/null 2>&1; then
-    # Stage only BlastRadius's own outputs — nothing the developer didn't
-    # already choose to commit.
+    # Stage only BlastRadius's committed outputs — the report and the
+    # queryable graph. facts.json / meta.json are gitignored build internals.
     git add "$ROOT/blastradius.md" \
             "$ROOT/.claude/skills/blastradius/index/graph.json" \
-            "$ROOT/.claude/skills/blastradius/index/facts.json" \
-            "$ROOT/.claude/skills/blastradius/index/meta.json" \
             >/dev/null 2>&1 || true
 fi
 
