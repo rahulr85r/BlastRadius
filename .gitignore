@@ -1,3 +1,11 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Build internals — regenerated on every run and machine-specific, so they'd
+# churn the git history for no benefit. Only graph.json (the queryable graph)
+# and blastradius.md (the report) are committed.
+#   facts.json — intermediate parse output
+#   meta.json  — incremental-build hash cache (per-clone)
+.claude/skills/blastradius/index/facts.json
+.claude/skills/blastradius/index/meta.json
